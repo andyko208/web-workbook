@@ -1,29 +1,50 @@
+body{
+  background-color: yellowgreen;
+  font-style: italic;
+}
+
+body > header {
+  text-align: center;
+  color:brown;
+}
+
+body > main > nav {
+  text-align: center;
+}
+
 .normtxt {           /*comfortable way of setting font*/
   font-style: normal;
   font-weight: lighter;
 }
-.xspace {            /*Deletes spaces between elements*/
+
+.xspace {         /*Deletes spaces between elements*/
   margin: 0;
   padding: 0;
 }
-.right {             /*comfortable way of moving texts*/
+
+.right {          /*comfortable way of moving texts*/
   float:right;
   vertical-align: top;
+  width: 600px;
 }
+
+.left {           /*comfortable way of moving texts*/
+  float:left;
+  vertical-align:top;
+  width: 600px
+}
+
+.center {        /*Creates a line that separates L&R*/
+    border-left: thick double blue;
+    height: 650px;
+    position:absolute;
+    left: 50%;
+    margin-top: -10px;
+}
+
 .blockdeco {
   border: solid;
   border-style: inset;
   background-position: left;
   background-color: pink;
-}
-body{
-  background-color: yellowgreen;
-  font-style: italic;
-}
-body > header {
-  text-align: center;
-  color:brown;
-}
-body > main > nav {
-  text-align: center;
 }
