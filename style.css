@@ -1,1 +1,10 @@
 /* You can style your links page here */
+.left {
+  float: left;
+  vertical-align: top;
+}
+
+.right {
+  float: right;
+  vertical-align: top;
+}
