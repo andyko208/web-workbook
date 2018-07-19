@@ -1,3 +1,14 @@
 body {
   background-color: rgba(255, 255, 128, .5);
 }
+h1 {
+  margin: 20px;
+  text-align: center;
+}
+main {
+  border: 5px solid lightpink;
+  border-radius: 30px;
+  width: 50%;
+  margin: auto;
+  padding: 0 30px 200px;
+}
