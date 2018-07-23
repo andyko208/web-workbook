@@ -7,7 +7,17 @@ main {
 h1 {
   text-align: center;
 }
-
+img {
+  width: 300px;
+  height: 200px;
+  margin: 20px auto auto 250px;
+}
+a {
+  padding-left: 75px;
+  padding-top: 20px;
+  margin-left: 20px;
+  margin-top: 50px;
+}
 .profile {
   border: 10px outset orange;
   border-bottom-right-radius: 20%;
@@ -15,7 +25,7 @@ h1 {
   width: 40%;
   margin-top: 20px;
   margin-left: 50px;
-  padding-bottom: 25%;
+  padding-bottom: 220px;
 }
 .aboutme {
   border: 10px inset gold;
@@ -24,5 +34,15 @@ h1 {
   width: 40%;
   margin-top: 20px;
   margin-left: 55%;
-  padding-bottom: 25%;
+  padding-bottom: 30px;
+}
+.ital {
+  text-align: center;
+  font-style: italic;
+  background-color: lightgray;
+}
+.text {
+  font-family: serif;
+  font-size: 20px;
+  margin-left: 20px;
 }
