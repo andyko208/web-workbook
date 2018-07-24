@@ -7,16 +7,21 @@ body {
 }
 .header{
   width: 50%;
-  float: left;
   background-color: #193A55;
-  padding: 10px 0 0 10px;
-  border: 1px white solid;
+  margin: -10px auto 0 -10px;
+  border-bottom: 1px solid white;
+}
+.size {
+  margin-left: 80px;
 }
 .nav {
+  text-align: center;
   width: 50%;
   background-color: #193A55;
   float:right;
-  border: 1px white solid;
+  margin: -85px -10px 0 0;
+  padding: 30px 0 36px 20px;
+  border-bottom: 1px solid white;
 }
 a:visited{
   color: white;
