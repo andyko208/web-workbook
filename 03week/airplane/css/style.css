@@ -6,15 +6,21 @@ body {
   font-size: 12px;
 }
 .header{
-  position:relative;
-  margin: 15px;
+  width: 50%;
+  float: left;
+  background-color: #193A55;
+  padding: 10px 0 0 10px;
   border: 1px white solid;
 }
 .nav {
   width: 50%;
-  margin: -75px auto 5px 0;
-  float: right;
+  background-color: #193A55;
+  float:right;
+  border: 1px white solid;
 }
-ul:hover {
+a:visited{
+  color: white;
+}
+a:hover {
   color: green;
 }
