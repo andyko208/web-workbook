@@ -29,3 +29,9 @@ a:visited{
 a:hover {
   color: green;
 }
+button {
+  background-color: #018D80
+}
+button:focus{
+  background-color: #0063B7;
+}
