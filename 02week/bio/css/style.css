@@ -1,0 +1,10 @@
+body {
+  background-color: hsl(50, 33%, 25%);
+}
+.block {
+  border:solid;
+  border-radius: 30px;
+  width: 600px;
+  height: 500px;
+  background-color:#ccc;
+}
