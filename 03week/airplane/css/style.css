@@ -30,8 +30,46 @@ a:hover {
   color: green;
 }
 button {
-  background-color: #018D80
+  background-color: #018D80;
+  border-radius: 5px;
+  padding: 2px 47px;
+  margin-right: -10px;
 }
 button:focus{
   background-color: #0063B7;
+}
+input{
+  background-color: #193A55;
+  border-radius: 5px;
+  color: gray;
+  padding: 10px 20px 10px 10px;
+  border: 2px solid white;
+}
+.content {
+  margin: 7% 0 0 5%;
+}
+.tcont {
+  width:31%;
+  border: 1px solid white;
+}
+.mcont {
+  width:25%;
+  margin-left: 10px;
+  background-color: #193A55;
+  word-spacing: 15px;
+
+  border: 1px solid white;
+  padding: 40px 50px 15px 15px;
+}
+.mtcont{
+  padding-bottom: 15px;
+}
+.bcont {
+  background-color: #193A55;
+  border: 1px solid white;
+  padding-left: 20px;
+}
+h4 {
+  display: inline;
+  font-weight: lighter;
 }

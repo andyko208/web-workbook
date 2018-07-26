@@ -20,22 +20,37 @@
         <img src="./img/login-icon.png" alt="deal"/>&ensp;Register/Login</a>
     </div>
     <main>
-      <div>    <!--button-->
-        <button type="button" name="plane">
-        <img src="./img/plane-icon.png" alt="plane"></button>
-        <button type="button" name="hotel">
-        <img src="./img/hotel-icon.png" alt="hotel"></button>
-        <button type="button" name="car">
-        <img src="./img/car-icon.png" alt="car"></button>
-      </div>
-      <div>    <!--input-->
-        <input type="text" name="" value="">
-        <input type="text" name="" value=""><br>
-        <input type="text" name="" value="">
-        <input type="text" name="" value="">
-      </div>
-      <div>   <!--passengers-->
-        <button type="button">Search Flights</button>
+      <div class="content">    <!--button-->
+        <div class="tcont">
+          <button type="button" name="plane">
+          <img src="./img/plane-icon.png" alt="plane"></button>
+          <button type="button" name="hotel">
+          <img src="./img/hotel-icon.png" alt="hotel"></button>
+          <button type="button" name="car">
+          <img src="./img/car-icon.png" alt="car"></button>
+        </div>
+        <div class="mcont">    <!--input-->
+          <div class="mtcont">
+            <input type="text" value="Depart">
+            <input type="text" value="Arrive"><br>
+          </div>
+          <div>
+            <input type="text" value="mm/dd/yy">
+            <input type="text" value="mm/dd/yy"><br>
+          </div>
+            <h4>Passengers</h4>
+            <select class="" name="">
+              <option value="">1</option>
+              <option value="">No more</option>
+            </select>
+            <label>
+              <input type="checkbox" value="">Return
+              <span class="circ"></span></label>
+            <label>
+              <input type="checkbox" value="">One way
+              <span class="circ"></span></label><br>
+            <button type="button">Search Flights</button>
+          </div>
       </div>
     </main>
   </body>
