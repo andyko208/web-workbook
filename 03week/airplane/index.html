@@ -23,34 +23,39 @@
       <div class="content">    <!--button-->
         <div class="tcont">
           <button type="button" name="plane">
-          <img src="./img/plane-icon.png" alt="plane"></button>
+          <img src="./img/plane-icon.png" alt="plane" width="30px"></button>
           <button type="button" name="hotel">
-          <img src="./img/hotel-icon.png" alt="hotel"></button>
+          <img src="./img/hotel-icon.png" alt="hotel" width="30px"></button>
           <button type="button" name="car">
-          <img src="./img/car-icon.png" alt="car"></button>
+          <img src="./img/car-icon.png" alt="car" width="30px"></button>
         </div>
         <div class="mcont">    <!--input-->
           <div class="mtcont">
             <input type="text" value="Depart">
             <input type="text" value="Arrive"><br>
           </div>
-          <div>
-            <input type="text" value="mm/dd/yy">
-            <input type="text" value="mm/dd/yy"><br>
+          <div class="mbcont">
+            <input type="text" value="mm/dd/yyyy">
+            <input type="text" value="mm/dd/yyyy"><br>
           </div>
+          <div class="b1cont">
             <h4>Passengers</h4>
             <select class="" name="">
               <option value="">1</option>
               <option value="">No more</option>
             </select>
-            <label>
-              <input type="checkbox" value="">Return
-              <span class="circ"></span></label>
-            <label>
-              <input type="checkbox" value="">One way
-              <span class="circ"></span></label><br>
-            <button type="button">Search Flights</button>
+            <label class="container">Return
+              <input type="checkbox" checked="checked">
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">One&ensp;way
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+          <div class="b2cont">
+            <button type="button"><h3>Search Flights</h3></button>
           </div>
+        </div>
       </div>
     </main>
   </body>
