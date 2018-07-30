@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="css/style.css">
+    <meta charset="utf-8">
+    <title>Airline</title>
+  </head>
+  <body>
+    <div class="header">
+      <img src="./img/logo.png" alt="me" class="size"/>
+    </div>
+    <div class ="nav">
+      <a href="http://www.google.com">
+        <img src="./img/home-icon.png" alt="hm"/>&ensp;Home &ensp;</a>
+      <a href="https://www.facebook.com/">
+        <img src="./img/deal-icon.png" alt="deal"/>&ensp;Travel Deals&ensp;</a>
+      <a href="https://www.youtube.com/">
+        <img src="./img/schedule-icon.png" alt="clock">&ensp;Flight Schedule&ensp;</a>
+      <a href="https://www.amazon.com/">
+        <img src="./img/login-icon.png" alt="deal"/>&ensp;Register/Login</a>
+    </div>
+    <main>
+      <div class="content">    <!--button-->
+        <div class="tcont">
+          <button type="button" name="plane">
+          <img src="./img/plane-icon.png" alt="plane" width="30px"></button>
+          <button type="button" name="hotel">
+          <img src="./img/hotel-icon.png" alt="hotel" width="30px"></button>
+          <button type="button" name="car">
+          <img src="./img/car-icon.png" alt="car" width="30px"></button>
+        </div>
+        <div class="mcont">    <!--input-->
+          <div class="mtcont">
+            <input type="text" value="Depart">
+            <input type="text" value="Arrive"><br>
+          </div>
+          <div class="mbcont">
+            <input type="text" value="mm/dd/yyyy">
+            <input type="text" value="mm/dd/yyyy"><br>
+          </div>
+          <div class="b1cont">
+            <h4>Passengers</h4>
+            <select class="" name="">
+              <option value="">1</option>
+              <option value="">No more</option>
+            </select>
+            <label class="container">Return
+              <input type="checkbox" checked="checked">
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">One&ensp;way
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+          <div class="b2cont">
+            <button type="button"><h3>Search Flights</h3></button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
