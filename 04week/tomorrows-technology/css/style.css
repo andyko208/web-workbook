@@ -3,36 +3,62 @@ body {
   margin: 0 auto;
 }
 .size{
-  width: 800px;
+  width: 750px;
   height: 500px;
 }
-.container {
+.title {
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  margin: 40px;
-}
-.tom {
+  margin-top: 40px;
   margin-left: 40px;
 }
-.tom h1 , .tom h3{
+.article h1 , .article h2{         /*articleorrow's tech*/
   font-family: sans-serif;
   font-weight: lighter;
 }
-.tom a {
+.article h2{
+  font-size: 20px;
+}
+.article a {                      /*technology button*/
   background-color: #4D4D4D;
   color: white;
-  padding: 5px 10px;
+  padding: 10px 10px;
   text-decoration: none;
   font-family: sans-serif;
   font-weight: lighter;
 }
 .stories {
-  height:300px;
-  width:400px;
-  margin-left: 30px;
+  width: 220px;
+  margin-left: 10px;
+}
+.stories h2{
+  margin-top: 0;
+  font-size: 1.2em;
 }
 .stories h3 {
   font-family: sans-serif;
   font-weight: bolder;
+  font-size:11px;
+}
+.bottom {
+  display: flex;
+  width:750px;
+  justify-content: space-around;
+  background-color: gray;
+  color:white;
+  list-style-type: none;
+}
+.lists {
+}
+.sns {
+}
+@media (max-width: 768px){
+  .stories{
+    display: none;
+  }
+  title{
+    width:768px;
+  }
+}
+  @media (max-width: 576px){
+
 }
