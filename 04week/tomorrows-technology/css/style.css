@@ -9,7 +9,8 @@ body {
 .title {
   display: flex;
   margin-top: 40px;
-  margin-left: 40px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 .article h1 , .article h2{         /*articleorrow's tech*/
   font-family: sans-serif;
@@ -29,7 +30,7 @@ body {
 }
 .stories {
   width: 220px;
-  margin-left: 10px;
+  margin-left: 15px;
 }
 .stories h2{
   margin-top: 0;
@@ -41,7 +42,7 @@ body {
   font-size:11px;
 }
 .bottom {
-  display: flex;
+  display: none;
   width:100%;
   margin: 50px auto 0px auto;
   justify-content: space-evenly;
@@ -57,15 +58,12 @@ li {
   display: inline;
 }
 @media (max-width: 1024px){
-  .bottom{
-    display: none;
-  }
   .stories{
     display: block;
   }
 }
 @media (max-width: 768px){
-  .stories, .bottom{
+  .stories{
     display: none;
   }
   .article img{
