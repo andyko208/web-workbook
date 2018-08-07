@@ -1,1 +1,157 @@
-
+body h1, h3{
+  text-align: center;
+}
+body h3{
+  font-weight: lighter;
+}
+.dot {
+    height: 20px;
+    width: 75px;
+    background-color: #F56441;
+    border-radius: 50%;
+}
+.cont1{
+  display: flex;
+  text-align: left;
+}
+.cont1 > img {
+  margin:20px 20px 20px 25px;
+  width:170px;
+  height:150px;
+  border: 2px black solid;
+}
+.cont2{
+  text-align:center;
+}
+.cont2 > img{
+  width:90%;
+  margin-top: 16px;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  border: 2px black solid;
+}
+.cont2 > p {
+  text-align: left;
+  width:90%;
+  margin-left:30px;
+}
+.cont3{
+  text-align: center;
+}
+.cont3 > img{
+  width:80%;
+  margin-top: 16px;
+  height: 80px;
+  border: 2px black solid;
+}
+.cont3 > p{
+  text-align: left;
+  width:80%;
+  margin-left:16px;
+}
+.cont4{
+  display:flex;
+}
+.cont4 > img{
+  width:45%;
+  margin: 10px 0 10px 16px;
+  height: 100px;
+  border: 2px black solid;
+}
+.cont4 > p{
+  margin-left:16px;
+  width:45%;
+  text-align: left;
+}
+.cont5{
+  text-align: center;
+}
+.cont5 > img{
+  width:80%;
+  margin-top: 16px;
+  height: 100px;
+  border: 2px black solid;
+}
+.cont5 > p{
+  text-align: left;
+  width:80%;
+  margin-left: 16px;
+}
+.box6{
+  display: flex;
+  grid-area:box6;
+}
+.main-container{
+  margin:15px;
+  display: grid;
+  grid-template-columns:repeat(2, 1fr);
+  grid-template-rows: 0.5fr 2fr 1.5fr;
+  grid-gap: 1em;
+  grid-template-areas:
+      "box1 box2"
+  "box3 mid-container"
+  "bot-container bot-container";
+}
+.main-container > .box1 , .box2, .box3{
+  border:3px solid black;
+}
+.mid-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1.5fr .5fr;
+  grid-template-areas:
+    "box4 box5"
+    "box6 box6";
+  grid-gap: 2em;
+}
+.mid-container > div{
+  border:3px solid black;
+}
+.bot-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-auto-rows: minmax(300px, auto);
+  grid-gap:3em;
+  grid-area:bot-container;
+  grid-template-areas:
+  "box7 box8 box9 box10";
+}
+.bot-container > div{
+  border:3px solid black;
+}
+@media (max-width: 768px) {
+  body{
+    background-color: orange;
+  }
+  .box1, .box2, .bot-container{
+    display:none;
+  }
+  .main-container{
+    display:block;
+  }
+  .main-container > .box3{
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 576px) {
+  body{
+    background-color: lightgreen;
+  }
+  .box1, .box2, .box3, .mid-container{
+    display: none;
+  }
+  .bot-container{
+    display: block;
+    margin: 0 50px;
+  }
+  .bot-container > div{
+    margin-top: 0px;
+    margin-bottom: 30px;
+    padding: 20px 20px 80px 20px;
+  }
+  .bot-container > div > div >img{
+    width:95%;
+    height:200px;
+  }
+}
