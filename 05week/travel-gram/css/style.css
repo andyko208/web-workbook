@@ -4,11 +4,27 @@ body h1, h3{
 body h3{
   font-weight: lighter;
 }
+/* .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-end;
+} */
+span {
+  display: inline-block;
+}
 .dot {
-    height: 20px;
-    width: 75px;
+
+    height: 25px;
+    width: 25px;
     background-color: #F56441;
     border-radius: 50%;
+}
+.block {
+
+  width:50px;
+  height: 20px;
+  background-color: #F56441;
 }
 .cont1{
   display: flex;
