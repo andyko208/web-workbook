@@ -1,3 +1,64 @@
+#col1{
+  background-color: #F56441;
+}
+#col2{
+  background-color: #F5AB41;
+}
+#col3{
+  background-color: #F5F041;
+}
+#col4{
+  background-color: #A6F541;
+}
+#col5{
+  background-color: #41F5CF;
+}
+#col6{
+  background-color: #4180F5;
+}
+#col7{
+  background-color: #4941F5;
+}
+#col8{
+  background-color: #A341F5;
+}
+#col9{
+  background-color: #F541F5;
+}
+#col10{
+  background-color: #F541CC;
+}
+#col11{
+  background-color: #F54185;
+}
+#col12{
+  background-color: #F5415A;
+}
 body{
-  background-color: orange;
+  background-color: #41C7F5;
+}
+.box > div{
+  margin: 0 auto 10px auto;
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+}
+.right{
+  transition: transform 800ms ease-in-out;
+  pointer-events: none;
+}
+.box:hover .right {
+  transform: translate(430px, 0) rotate(360deg);
+  width: 100px;
+  height: 100px;
+}
+.left{
+  transition: transform 800ms ease-in-out;
+  pointer-events: none;
+}
+.box:hover .left {
+  transform: translate(-500px, 0) rotate(-360deg);
+  background-color:yellow;
+  width: 25px;
+  height: 25px;
 }
