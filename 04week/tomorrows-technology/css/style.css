@@ -1,0 +1,91 @@
+body {
+  height: 850px;
+  margin: 0 auto;
+}
+.size{
+  width: 750px;
+  height: 500px;
+}
+.title {
+  display: flex;
+  margin-top: 40px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.article h1 , .article h2{         /*articleorrow's tech*/
+  font-family: sans-serif;
+  font-weight: lighter;
+  width:750px;
+}
+.article h2{
+  font-size: 20px;
+}
+.article a {                      /*technology button*/
+  background-color: #4D4D4D;
+  color: white;
+  padding: 10px 10px;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-weight: lighter;
+}
+.stories {
+  width: 220px;
+  margin-left: 15px;
+}
+.stories h2{
+  margin-top: 0;
+  font-size: 1.2em;
+}
+.stories h3 {
+  font-family: sans-serif;
+  font-weight: bolder;
+  font-size:11px;
+}
+.bottom {
+  display: none;
+  width:100%;
+  margin: 50px auto 0px auto;
+  justify-content: space-evenly;
+  background-color: gray;
+  color:white;
+  list-style-type: none;
+}
+ul{
+  list-style-type: none;
+  margin-left: -40px;
+}
+li {
+  display: inline;
+}
+@media (max-width: 1024px){
+  .stories{
+    display: block;
+  }
+}
+@media (max-width: 768px){
+  .stories{
+    display: none;
+  }
+  .article img{
+    margin-right: 20px;
+    margin-left: 0px;
+  }
+}
+@media (max-width: 576px){
+  .article > h1{
+    font-size: 1.5em;
+    width: 70%;
+  }
+  .article >h2 {
+    width:80%;
+  }
+  .article img {
+    width:500px;
+  }
+  .bottom{
+    display: flex;
+  }
+  ul i{
+    margin-left: 50px;
+  }
+}
