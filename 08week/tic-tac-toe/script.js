@@ -2,9 +2,8 @@
 
 $(document).ready(function() {
   var turn = 'O';
-  $('[data-cell]').on('click', function(){
+  $('[data-cell]').on('click', function() {
     if ($(this).text() === ''){
-      // checkwin();
       $(this).text(turn);
       if(turn === 'O'){
         turn = 'X';
@@ -12,19 +11,88 @@ $(document).ready(function() {
       else{
         turn = 'O';
       }
+      checkwin();
     }
-
+    $("#clear").click(function() {
+      // 'O'always starts 1st
+      $('[data-cell]').empty();
+        turn = "O";
+      $('#announce-winner').empty();
+    });
   })
+  function checkwin() {
+    // X
+    // rows
+    if($('[data-cell = "0"]').text() === 'X' &&
+        $('[data-cell = "1"]').text() === 'X' &&
+        $('[data-cell = "2"]').text() === 'X')
+      $('#announce-winner').text('X wins');
+    else if($('[data-cell = "3"]').text() === 'X' &&
+        $('[data-cell = "4"]').text() === 'X' &&
+        $('[data-cell = "5"]').text() === 'X')
+      $('#announce-winner').text('X wins');
+    else if($('[data-cell = "6"]').text() === 'X' &&
+        $('[data-cell = "7"]').text() === 'X' &&
+        $('[data-cell = "8"]').text() === 'X')
+      $('#announce-winner').text('X wins');
+    // cols
+    else if($('[data-cell = "0"]').text() === 'X' &&
+        $('[data-cell = "3"]').text() === 'X' &&
+        $('[data-cell = "6"]').text() === 'X')
+      $('#announce-winner').text('X wins');
+    else if($('[data-cell = "1"]').text() === 'X' &&
+        $('[data-cell = "4"]').text() === 'X' &&
+        $('[data-cell = "7"]').text() === 'X')
+      $('#announce-winner').text('X wins');
+    else if($('[data-cell = "2"]').text() === 'X' &&
+        $('[data-cell = "5"]').text() === 'X' &&
+        $('[data-cell = "8"]').text() === 'X')
+      $('#announce-winner').text('X wins');
+    // diag
+    else if($('[data-cell = "0"]').text() === 'X' &&
+        $('[data-cell = "4"]').text() === 'X' &&
+        $('[data-cell = "8"]').text() === 'X')
+      $('#announce-winner').text('X wins');
+    else if($('[data-cell = "2"]').text() === 'X' &&
+        $('[data-cell = "4"]').text() === 'X' &&
+        $('[data-cell = "6"]').text() === 'X')
+      $('#announce-winner').text('X wins');
+    // 'O'
+    // 'rows'
+    else if($('[data-cell = "0"]').text() === 'O' &&
+        $('[data-cell = "1"]').text() === 'O' &&
+        $('[data-cell = "2"]').text() === 'O')
+      $('#announce-winner').text('O wins');
+    else if($('[data-cell = "3"]').text() === 'O' &&
+        $('[data-cell = "4"]').text() === 'O' &&
+        $('[data-cell = "5"]').text() === 'O')
+      $('#announce-winner').text('O wins');
+    else if($('[data-cell = "6"]').text() === 'O' &&
+        $('[data-cell = "7"]').text() === 'O' &&
+        $('[data-cell = "8"]').text() === 'O')
+      $('#announce-winner').text('O wins');
+    // cols
+    else if($('[data-cell = "0"]').text() === 'O' &&
+        $('[data-cell = "3"]').text() === 'O' &&
+        $('[data-cell = "6"]').text() === 'O')
+      $('#announce-winner').text('O wins');
+    else if($('[data-cell = "1"]').text() === 'O' &&
+        $('[data-cell = "4"]').text() === 'O' &&
+        $('[data-cell = "7"]').text() === 'O')
+      $('#announce-winner').text('O wins');
+    else if($('[data-cell = "2"]').text() === 'O' &&
+        $('[data-cell = "5"]').text() === 'O' &&
+        $('[data-cell = "8"]').text() === 'O')
+      $('#announce-winner').text('O wins');
+    // diag
+    else if($('[data-cell = "0"]').text() === 'O' &&
+        $('[data-cell = "4"]').text() === 'O' &&
+        $('[data-cell = "8"]').text() === 'O')
+      $('#announce-winner').text('O wins');
+    else if($('[data-cell = "2"]').text() === 'O' &&
+        $('[data-cell = "4"]').text() === 'O' &&
+        $('[data-cell = "6"]').text() === 'O')
+      $('#announce-winner').text('O wins');
+    // Tie condition
+    }
 });
-// function checkwin() {
-//   if($('data-cell = "0"').text() === turn &&
-//       $('data-cell = "1"').text() === turn &&
-//       $('data-cell = "2"').text() === turn)
-//     $('#announce-winner').text('X wins');
-// }
-//
-// $('#clear'.click(function(){
-//   $('[data-cell]').empty();
-//   turn = "X";
-//   $('#announce-winner').empty();
-// })
