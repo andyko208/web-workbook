@@ -22,6 +22,7 @@ function report() {
     let howManyDice = 0; // we zero out our counter
     for (let i = 0; i < 5; i++) {  // we create the inner loop that cycles through the rolled dice
       if (dieVal === Number(diceHtml[i].getAttribute('data-roll'))) {  // we check if the rolled die is equal to the one's we're counting
+        console.log(Number(diceHtml[i].getAttribute('data-roll')));
         howManyDice++; // if so, we add one to the count
       }
     }
@@ -37,14 +38,19 @@ function report() {
     if (howManyDice === 5) { // we check after the counting is done if it is equal to '5'
       document.querySelector("#report").innerHTML += `There are a yacht of ${dieVal}s<br>`;  // if yes, we report a yacht
     }
-
-}
-
-// two of dice have the same points, like 3 6 5 6 1 - called pair: example solved for you. Complete the other cases below:
-
-// three of dice have the same points, like 2 4 5 4 4 - called three;
-// four of dice have the same points, like 1 4 1 1 1 - called four;
-// all five dice have the same points, like 2 2 2 2 2 - called yacht;
+  }
+  let find = 1;
+  for (let j = 0; j < 5; j++) {
+    let limit = 5;
+    for (let i = 0; i < 5; i++) {
+      if (find === Number(diceHtml[i].getAttribute('data-roll'))){
+        limit--;
+      }
+    }
+    find++;
+    if(limit === 0)
+      document.querySelector("#report").innerHTML += `There is a small-straight<br>`;
+  }
 // two pairs at once, like 3 6 5 3 5 - called two-pairs;
 // pair and three at once, like 1 6 6 1 6 - called full-house;
 // sequence from 1 to 5, like 2 4 3 5 1 - called small-straight;
