@@ -20,10 +20,19 @@ function report() {
   let diceHtml = document.querySelectorAll('.die'); // this puts all the individual die HTML elements in diceHtml
   for (let dieVal = 1; dieVal < 7; dieVal++) {  // we set up a nested loop, first we check for all the 1s, then 2s, etc
     let howManyDice = 0; // we zero out our counter
+    let doub = 0;
+    let trip = 0;
     for (let i = 0; i < 5; i++) {  // we create the inner loop that cycles through the rolled dice
       if (dieVal === Number(diceHtml[i].getAttribute('data-roll'))) {  // we check if the rolled die is equal to the one's we're counting
-        console.log(Number(diceHtml[i].getAttribute('data-roll')));
+        // console.log(Number(diceHtml[i].getAttribute('data-roll')));
         howManyDice++; // if so, we add one to the count
+        if (howManyDice === 2){
+          doub+= 1;
+          console.log("this is # of doubles " + doub);
+        }
+        if (doub === 2) {
+          document.querySelector("#report").innerHTML += `There is a two-pair<br>`;
+        }
       }
     }
     if (howManyDice === 2) { // we check after the counting is done if it is equal to '2'
@@ -39,18 +48,7 @@ function report() {
       document.querySelector("#report").innerHTML += `There are a yacht of ${dieVal}s<br>`;  // if yes, we report a yacht
     }
   }
-  let find = 1;
-  for (let j = 0; j < 5; j++) {
-    let limit = 5;
-    for (let i = 0; i < 5; i++) {
-      if (find === Number(diceHtml[i].getAttribute('data-roll'))){
-        limit--;
-      }
-    }
-    find++;
-    if(limit === 0)
-      document.querySelector("#report").innerHTML += `There is a small-straight<br>`;
-  }
+
 // two pairs at once, like 3 6 5 3 5 - called two-pairs;
 // pair and three at once, like 1 6 6 1 6 - called full-house;
 // sequence from 1 to 5, like 2 4 3 5 1 - called small-straight;
