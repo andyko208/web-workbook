@@ -2,6 +2,7 @@
 
 $(document).ready(function() {
   var turn = 'O';
+  var count = 0;
   $('[data-cell]').on('click', function() {
     if ($(this).text() === ''){
       $(this).text(turn);
@@ -11,7 +12,11 @@ $(document).ready(function() {
       else{
         turn = 'O';
       }
+      count++;
       checkwin();
+    }
+    if (count === 9) {
+      $('#announce-winner').text('Tie');
     }
     $("#clear").click(function() {
       // 'O'always starts 1st
@@ -93,6 +98,5 @@ $(document).ready(function() {
         $('[data-cell = "4"]').text() === 'O' &&
         $('[data-cell = "6"]').text() === 'O')
       $('#announce-winner').text('O wins');
-    // Tie condition
     }
 });
