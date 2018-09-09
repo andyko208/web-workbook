@@ -20,8 +20,7 @@ function report() {
   let diceHtml = document.querySelectorAll('.die'); // this puts all the individual die HTML elements in diceHtml
   let doub = 0;     //two-pair
   let trip = 0;     //full-house
-  let count = 0;
-  let ss = 1;
+  // let values = new Array(5);
   for (let dieVal = 1; dieVal < 7; dieVal++) {  // we set up a nested loop, first we check for all the 1s, then 2s, etc
     let howManyDice = 0; // we zero out our counter
     for (let i = 0; i < 5; i++) {  // we create the inner loop that cycles through the rolled dice
@@ -30,6 +29,7 @@ function report() {
         howManyDice++; // if so, we add one to the count
       }
     }
+
     if (howManyDice === 2) { // we check after the counting is done if it is equal to '2'
       document.querySelector("#report").innerHTML += `There are a pair of ${dieVal}s<br>`;  // if yes, we report a pair
       doub++;
@@ -51,15 +51,6 @@ function report() {
   if (doub === 1 && trip === 1) {
     document.querySelector("#report").innerHTML += `There is a full-house<br>`;
   }
-  for (let i = 0; i < 5 ; i++) {
-    if (ss === Number(diceHtml[i].getAttribute('data-roll'))) {
-      count++;
-      ss++;
-      console.log(count + " is count");
-      console.log(ss + " is ss");
-    }
-  }
-
 // sequence from 1 to 5, like 2 4 3 5 1 - called small-straight;
 // sequence from 2 to 6, like 6 3 4 2 5 - called big-straight.
 }
