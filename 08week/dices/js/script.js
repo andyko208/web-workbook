@@ -20,6 +20,10 @@ function report() {
   let diceHtml = document.querySelectorAll('.die'); // this puts all the individual die HTML elements in diceHtml
   let doub = 0;     //two-pair
   let trip = 0;     //full-house
+  let quad = 0;
+  let pent = 0;
+  let sh = 0;
+  let bh = 0;
   // let values = new Array(5);
   for (let dieVal = 1; dieVal < 7; dieVal++) {  // we set up a nested loop, first we check for all the 1s, then 2s, etc
     let howManyDice = 0; // we zero out our counter
@@ -29,7 +33,6 @@ function report() {
         howManyDice++; // if so, we add one to the count
       }
     }
-
     if (howManyDice === 2) { // we check after the counting is done if it is equal to '2'
       document.querySelector("#report").innerHTML += `There are a pair of ${dieVal}s<br>`;  // if yes, we report a pair
       doub++;
@@ -40,9 +43,11 @@ function report() {
     }
     if (howManyDice === 4) { // we check after the counting is done if it is equal to '4'
       document.querySelector("#report").innerHTML += `There are a four of ${dieVal}s<br>`;  // if yes, we report a four
+      quad++;
     }
     if (howManyDice === 5) { // we check after the counting is done if it is equal to '5'
       document.querySelector("#report").innerHTML += `There are a yacht of ${dieVal}s<br>`;  // if yes, we report a yacht
+      pent++;
     }
   }
   if (doub === 2) {
@@ -50,6 +55,27 @@ function report() {
   }
   if (doub === 1 && trip === 1) {
     document.querySelector("#report").innerHTML += `There is a full-house<br>`;
+  }
+  if (doub === 0 && trip === 0 && quad === 0 && pent === 0) {
+    for (let i = 0; i < 5; i++) {
+      if (Number(diceHtml[i].getAttribute('data-roll')) === 6) {
+        sh++;
+        console.log(sh + " is sh");
+      }
+      else if (Number(diceHtml[i].getAttribute('data-roll')) === 1) {
+        bh++;
+        console.log(bh + " is bh");
+      }
+    }
+  }
+  if (sh === 1 && bh === 1) {
+    document.querySelector("#report").innerHTML += `There is nothing<br>`;
+  }
+  if (sh === 1 && bh === 0) {
+    document.querySelector("#report").innerHTML += `There is a big-straight<br>`;
+  }
+  if (sh === 0 && bh === 1) {
+    document.querySelector("#report").innerHTML += `There is a small-straight<br>`;
   }
 // sequence from 1 to 5, like 2 4 3 5 1 - called small-straight;
 // sequence from 2 to 6, like 6 3 4 2 5 - called big-straight.
